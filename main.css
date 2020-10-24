@@ -1,18 +1,125 @@
+body {
+  background-image: url("https://keyassets-p2.timeincuk.net/wp/prod/wp-content/uploads/sites/53/2017/10/Great-Btisih-Bake-Off-set-contestants-2017.jpg");
+ }
+
+main{
+  background-color: #F8F7FF ;
+  margin: 20px 20px 20px 20px;
+  padding: 10px 10px 10px 10px;
+  }
+
+/* Start Page Css */
 .startPage{
 
 }
 
 .startPage h1{
-
+ text-align: center;
+ font-family: 'Poppins', sans-serif;
+ color: #E5989B;
 }
 
 .startPage h2{
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #6D6875;
+}
+
+.startPageImages{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 
 }
 
-main{
+.start-button-center{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.start-button{
+  color:#B5838D;
+}
+
+
+/* Question Page CSS */
+.counters{
+  text-align: left;
+  font-family:'Lobster Two', cursive;
+  color:#B5838D;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.card{
+  margin: 1;
+  flex: auto;
+  justify-content: center;
+  
+}
+
+.card h2{
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #6D6875;
+}
+
+
+.card label{
+  font-family: 'Poppins', sans-serif;
+  color: #6D6875;
+}
+
+.card .submit-button button{
+  color:#B5838D;
+}
 
 
 
+/* Feedback Page CSS */
 
+.failed{
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #6D6875;
+}
+
+.failed .failed-button{
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color:#B5838D;
+}
+
+/* End Page Css */
+.endPage{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.endPage h1{
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #6D6875;
+}
+
+.endPage h2 {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #6D6875;
+}
+
+
+.endPage .play-again-button{
+  width: 100px;
+  height: 60px ;
+  color:#B5838D;
+  
 }
