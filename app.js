@@ -206,19 +206,12 @@ function handleStartQuiz() {
 }
 
 function handleAnswerSubmit() {
-  //here we put the score counter
-  //let scoreCount = 0
   $('main').on("submit", function () { })
   $("main").on("submit", "form", function (evt) {
     evt.preventDefault();
     let selectedAnswer = document.querySelector('input[name="answer"]:checked').value;
-
-    //let selectedAnswer = $(`input[type='radio]:checked`).val();
-    //console.log(selectedAnswer)
-
     let sudoCorrectAnswer = store.questions[store.questionNumber].correctAnswer
     console.log(selectedAnswer, store.questionNumber);
-    //if (store.questions[store.questionNumber].correctAnswer === selectedAnswer){
     if (sudoCorrectAnswer === selectedAnswer) {
       store.score++;
     }

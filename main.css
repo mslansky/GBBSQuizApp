@@ -40,6 +40,8 @@ main{
 
 .start-button{
   color:#B5838D;
+  background-color: #FFFFFC ;
+  border-color: #897C80;
 }
 
 
@@ -78,6 +80,8 @@ form{
 
 .card .submit-button button{
   color:#B5838D;
+  background-color: #FFFFFC ;
+  border-color: #897C80;
 }
 
 
@@ -90,10 +94,12 @@ form{
   color: #6D6875;
 }
 
-.failed .failed-button{
+.failed .failed-button button{
   text-align: center;
   font-family: 'Poppins', sans-serif;
   color:#B5838D;
+  background-color: #FFFFFC ;
+  border-color: #897C80;
 }
 
 /* End Page Css */
@@ -121,5 +127,8 @@ form{
   width: 100px;
   height: 60px ;
   color:#B5838D;
-  
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  background-color: #FFFFFC ;
+  border-color: #897C80;
 }
