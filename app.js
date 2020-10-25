@@ -70,9 +70,9 @@ function generateStartPage() {
   <section class="flexboxImages">
       <div class="startPageImages">
           <div class="PaulPrue">
-              <img src="/paul.png" alt="Image of Paul Hollywood"></div>
+              <img src="paul.png" alt="Image of Paul Hollywood"></div>
           <div class="PaulPrue">
-              <img src="/prue2.png" alt="Image of Prue Leith"></div>
+              <img src="prue2.png" alt="Image of Prue Leith"></div>
       </div>
   </section>
   <div class="start-button-center">
