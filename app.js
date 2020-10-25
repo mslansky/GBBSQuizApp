@@ -140,7 +140,7 @@ function generateFeedback() {
   <p>Blimey! That isn't right Mate.</p>
   <p>The right answer is actually : ${store.questions[store.questionNumber].correctAnswer} </p>
   <br/>
-  <iframe src="https://giphy.com/embed/Y4sY1loVstZUPP5nHR" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+  <img src="https://media3.s-nbcnews.com/j/newscms/2020_39/3414748/200924-great-british-bake-off-ew-457p_4a3b4f2665f699cb673979c50d45ae4b.fit-760w.jpg">
   <br/>
   <br/>
   <div class ="failed-button">
