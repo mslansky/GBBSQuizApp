@@ -87,7 +87,6 @@ function generateStartPage() {
 
 function generateQuestionPage() {
   let question = store.questions[store.questionNumber];
-  console.log(question);
   let questionCount = store.questionNumber;
   questionCount++;
   let questionPage = `
@@ -173,7 +172,6 @@ function renderStartPage() {
 
 function renderQuestionPage() {
   $('.failed').remove();
-  console.log(store.questionNumber);
   let questionHTML = generateQuestionPage();
   $('main').html(questionHTML);
 }
@@ -182,14 +180,12 @@ function renderFeedback() {
   let feedback = generateFeedback();
   $('main').html(feedback);
   $('button[type=submit]').remove();
-  handleNextPage();
 }
 
 function renderEndPage() {
   $('.failed').remove();
   let endPage = generateEndPage();
   $('main').html(endPage);
-  handleEndPage();
 }
 
 
@@ -198,61 +194,52 @@ function renderEndPage() {
 // These functions handle events (submit, click, etc)
 
 function handleStartQuiz() {
-  $('.start-button').on('click', function () {
-    store.quizStarted = true;
-    renderQuestionPage();
-    console.log("Quiz Started!");
-  })
+  store.quizStarted = true;
+  renderQuestionPage();
 }
 
-function handleAnswerSubmit() {
-  $('main').on("submit", function () { })
-  $("main").on("submit", "form", function (evt) {
-    evt.preventDefault();
-    let selectedAnswer = document.querySelector('input[name="answer"]:checked').value;
-    let sudoCorrectAnswer = store.questions[store.questionNumber].correctAnswer
-    console.log(selectedAnswer, store.questionNumber);
-    if (sudoCorrectAnswer === selectedAnswer) {
-      store.score++;
-    }
-    console.log(store.questionNumber);
-    if ((store.questionNumber + 1) >= store.questions.length) {
-      store.questionNumber++;
-      renderEndPage();
-    } else {
-      let selectedAnswer = document.querySelector('input[name=answer]:checked').value;
-      console.log(selectedAnswer);
-      if (selectedAnswer !== store.questions[store.questionNumber].correctAnswer) {
-        renderFeedback();
-      } else {
-        store.questionNumber++;
-        renderQuestionPage();
-      }
-    }
-  })
+function handleAnswerSubmit(evt) {
+  evt.preventDefault();
+  let selectedAnswer = document.querySelector('input[name="answer"]:checked').value;
+  let sudoCorrectAnswer = store.questions[store.questionNumber].correctAnswer
+  if (sudoCorrectAnswer === selectedAnswer) {
+    store.score++;
+  }
+
+  if (selectedAnswer !== store.questions[store.questionNumber].correctAnswer) {
+    renderFeedback();
+  } else {
+    handleNextPage();
+  }
 }
 
 function handleNextPage() {
-  $(".next-question").on("click", function (evt) {
+  if ((store.questionNumber + 1) >= store.questions.length) {
+    store.questionNumber++;
+    renderEndPage();
+  } else {
     store.questionNumber++;
     renderQuestionPage();
-  });
+  }
 }
 
+
 function handleEndPage() {
-  $(".play-again-button").on("click", function (evt) {
-    store.questionNumber = 0;
-    store.score = 0;
-    store.quizStarted = false;
-    renderStartPage();
-    handleStartQuiz();
-  });
+  store.questionNumber = 0;
+  store.score = 0;
+  store.quizStarted = false;
+  renderStartPage();
+}
+function eventHandler() {
+  $("main").on("submit", "form", handleAnswerSubmit)
+  $("main").on('click', ".start-button", handleStartQuiz)
+  $("main").on("click", ".next-question", handleNextPage)
+  $("main").on("click", ".play-again-button", handleEndPage)
 }
 
 
 function main() {
   renderStartPage();
-  handleStartQuiz();
-  handleAnswerSubmit();
+  eventHandler();
 }
 main();

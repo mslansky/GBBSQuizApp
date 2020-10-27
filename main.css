@@ -102,6 +102,12 @@ form{
   border-color: #897C80;
 }
 
+failed img{
+  display: flex;
+  width: 30%;
+  height: 100%;
+}
+
 /* End Page Css */
 .endPage{
   display: flex;
@@ -138,7 +144,11 @@ form{
 
 @media all and (min-width: 800px) {
 
-
+  main{
+    background-color: #F8F7FF ;
+    margin: 20px 20px 20px 20px;
+    padding: 10px 10px 10px 10px;
+    }
 
 
   
