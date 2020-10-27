@@ -69,9 +69,9 @@ function generateStartPage() {
   <h2>Do you have what it takes to be starbaker?</h2>
   <section class="flexboxImages">
       <div class="startPageImages">
-          <div class="PaulPrue">
+          <div class="Paul">
               <img src="paul.png" alt="Image of Paul Hollywood"></div>
-          <div class="PaulPrue">
+          <div class="Prue">
               <img src="prue2.png" alt="Image of Prue Leith"></div>
       </div>
   </section>
