@@ -14,13 +14,13 @@ main{
 .startPage h1{
  text-align: center;
  font-family: 'Poppins', sans-serif;
- color: #E5989B;
+ color:#3A3042;
 }
 
 .startPage h2{
   text-align: center;
   font-family: 'Poppins', sans-serif;
-  color: #6D6875;
+  color:#373F51;
 }
 
 .startPageImages{
@@ -40,7 +40,7 @@ main{
 }
 
 .start-button{
-  color:#B5838D;
+  color:#3A3042;
   background-color: #FFFFFC ;
   border-color: #897C80;
 }
@@ -50,7 +50,7 @@ main{
 .counters{
   text-align: left;
   font-family:'Lobster Two', cursive;
-  color:#B5838D;
+  color:#3A3042;
 }
 
 form{
@@ -70,17 +70,17 @@ form{
 .card h2{
   text-align: center;
   font-family: 'Poppins', sans-serif;
-  color: #6D6875;
+  color:#3A3042;
 }
 
 
 .card label{
   font-family: 'Poppins', sans-serif;
-  color: #6D6875;
+  color:#3A3042;
 }
 
 .card .submit-button button{
-  color:#B5838D;
+  color:#3A3042;
   background-color: #FFFFFC ;
   border-color: #897C80;
 }
@@ -92,13 +92,13 @@ form{
 .failed{
   text-align: center;
   font-family: 'Poppins', sans-serif;
-  color: #6D6875;
+  color: #3A3042;
 }
 
 .failed .failed-button button{
   text-align: center;
   font-family: 'Poppins', sans-serif;
-  color:#B5838D;
+  color:#3A3042;
   background-color: #FFFFFC ;
   border-color: #897C80;
 }
@@ -120,20 +120,20 @@ form{
 .endPage h1{
   text-align: center;
   font-family: 'Poppins', sans-serif;
-  color: #6D6875;
+  color:#3A3042;
 }
 
 .endPage h2 {
   text-align: center;
   font-family: 'Poppins', sans-serif;
-  color: #6D6875;
+  color:#3A3042;
 }
 
 
 .endPage .play-again-button{
   width: 100px;
   height: 60px ;
-  color:#B5838D;
+  color:#3A3042;
   text-align: center;
   font-family: 'Poppins', sans-serif;
   background-color: #FFFFFC ;
