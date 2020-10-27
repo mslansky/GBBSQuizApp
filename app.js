@@ -1,3 +1,4 @@
+/* eslint-disable strict */
 /**
  * Example store structure
  */
@@ -81,7 +82,7 @@ function generateStartPage() {
   </button>
   </div>
   <br/>
-</div>`
+</div>`;
   return startPage;
 }
 
@@ -159,7 +160,7 @@ function generateEndPage() {
   <button class="play-again-button">
     <span class="button-label">Play Again!</span>
   </button>
-  </div>`
+  </div>`;
   return endPage;
 }
 
@@ -201,7 +202,7 @@ function handleStartQuiz() {
 function handleAnswerSubmit(evt) {
   evt.preventDefault();
   let selectedAnswer = document.querySelector('input[name="answer"]:checked').value;
-  let sudoCorrectAnswer = store.questions[store.questionNumber].correctAnswer
+  let sudoCorrectAnswer = store.questions[store.questionNumber].correctAnswer;
   if (sudoCorrectAnswer === selectedAnswer) {
     store.score++;
   }
@@ -232,7 +233,7 @@ function handleEndPage() {
 }
 function eventHandler() {
   $("main").on("submit", "form", handleAnswerSubmit)
-  $("main").on('click', ".start-button", handleStartQuiz)
+  $("main").on("click", ".start-button", handleStartQuiz)
   $("main").on("click", ".next-question", handleNextPage)
   $("main").on("click", ".play-again-button", handleEndPage)
 }
